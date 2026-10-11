@@ -1,0 +1,1598 @@
+{
+  "metadata": {
+    "generated_at_utc": "2026-10-11T08:31:41.411182+00:00",
+    "tool_name": "TraceMind AI - Digital Evidence Story Builder",
+    "version": "1.0.0",
+    "analyst_notes": ""
+  },
+  "executive_summary": {
+    "total_events_analyzed": 119,
+    "relative_time_start": 100,
+    "relative_time_end": 725,
+    "duration_seconds": 625,
+    "unique_users_count": 5,
+    "unique_hosts_count": 8,
+    "findings_summary": {
+      "CRITICAL": 3,
+      "HIGH": 6,
+      "MEDIUM": 0,
+      "LOW": 0
+    },
+    "ground_truth_matches": 2,
+    "analytical_detections": 7
+  },
+  "provenance": [
+    {
+      "filename": "auth.txt.gz",
+      "filepath": "D:\\New folder\\data\\synthetic\\auth.txt.gz",
+      "file_size_bytes": 365,
+      "sha256_hash": "59d0c4d8f5ac3aa1894ad90e7292e1eb8c6b848b80fe5a14113420c8d872b02e",
+      "record_count": 35,
+      "malformed_count": 0,
+      "is_synthetic": true,
+      "processing_timestamp_utc": "2026-10-11T08:25:01.999519+00:00",
+      "settings": {
+        "max_rows": 5000
+      }
+    },
+    {
+      "filename": "proc.txt.gz",
+      "filepath": "D:\\New folder\\data\\synthetic\\proc.txt.gz",
+      "file_size_bytes": 299,
+      "sha256_hash": "5bdac054625456b7f8851e3cee3fbe898560ab89d43221694562367844998cc1",
+      "record_count": 29,
+      "malformed_count": 0,
+      "is_synthetic": true,
+      "processing_timestamp_utc": "2026-10-11T08:25:02.031361+00:00",
+      "settings": {
+        "max_rows": 5000
+      }
+    },
+    {
+      "filename": "flows.txt.gz",
+      "filepath": "D:\\New folder\\data\\synthetic\\flows.txt.gz",
+      "file_size_bytes": 237,
+      "sha256_hash": "f431a225a4e9ba83a0a624baeda94d404c84542b2cd784ef8f4211af88b255d0",
+      "record_count": 27,
+      "malformed_count": 0,
+      "is_synthetic": true,
+      "processing_timestamp_utc": "2026-10-11T08:25:02.070579+00:00",
+      "settings": {
+        "max_rows": 5000
+      }
+    },
+    {
+      "filename": "dns.txt.gz",
+      "filepath": "D:\\New folder\\data\\synthetic\\dns.txt.gz",
+      "file_size_bytes": 175,
+      "sha256_hash": "bf2942b7bfed59572d0c25d56709cd18dd503e58e00fbec214fff802548b5ea3",
+      "record_count": 26,
+      "malformed_count": 0,
+      "is_synthetic": true,
+      "processing_timestamp_utc": "2026-10-11T08:25:02.124777+00:00",
+      "settings": {
+        "max_rows": 5000
+      }
+    },
+    {
+      "filename": "redteam.txt.gz",
+      "filepath": "D:\\New folder\\data\\synthetic\\redteam.txt.gz",
+      "file_size_bytes": 79,
+      "sha256_hash": "4cb567b5e18df67712cb6fd7c3ab856d5adf833a36253d5c7b6a3e972cd9c28c",
+      "record_count": 2,
+      "malformed_count": 0,
+      "is_synthetic": true,
+      "processing_timestamp_utc": "2026-10-11T08:25:02.169786+00:00",
+      "settings": {
+        "max_rows": 5000
+      }
+    }
+  ],
+  "ground_truth_analysis": [
+    {
+      "finding_id": "FIND-GROUNDTRUTH-redteam.txt.gz:1",
+      "title": "LANL Ground Truth Red Team Activity Matched (Host: C553)",
+      "severity": "CRITICAL",
+      "category": "GROUND_TRUTH",
+      "confidence_level": "CONFIRMED_GROUND_TRUTH",
+      "reason": "Official LANL red-team log confirms attack simulation at relative time t=635 involving User: 'U999@DOM1', Source: 'C17693', Destination: 'C553'. Found 13 corresponding system event(s) in observed logs within 300s.",
+      "involved_events": [
+        "redteam.txt.gz:1",
+        "auth.txt.gz:26",
+        "auth.txt.gz:27",
+        "auth.txt.gz:28",
+        "auth.txt.gz:34",
+        "auth.txt.gz:29",
+        "auth.txt.gz:30",
+        "auth.txt.gz:31",
+        "auth.txt.gz:32",
+        "proc.txt.gz:26",
+        "proc.txt.gz:27",
+        "proc.txt.gz:29",
+        "auth.txt.gz:33",
+        "proc.txt.gz:28"
+      ],
+      "involved_users": [
+        "U999@DOM1"
+      ],
+      "involved_hosts": [
+        "C800",
+        "C553",
+        "C17693"
+      ],
+      "evidence_sources": [
+        {
+          "file": "redteam.txt.gz",
+          "line": 1
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 28
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 34
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 30
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 31
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 32
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 33
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 28
+        }
+      ],
+      "start_time": 600,
+      "end_time": 725,
+      "recommendation": "Compare defense detection rules against this confirmed baseline to calibrate sensitivity and false-negative rates."
+    },
+    {
+      "finding_id": "FIND-GROUNDTRUTH-redteam.txt.gz:2",
+      "title": "LANL Ground Truth Red Team Activity Matched (Host: C800)",
+      "severity": "CRITICAL",
+      "category": "GROUND_TRUTH",
+      "confidence_level": "CONFIRMED_GROUND_TRUTH",
+      "reason": "Official LANL red-team log confirms attack simulation at relative time t=720 involving User: 'U999@DOM1', Source: 'C553', Destination: 'C800'. Found 15 corresponding system event(s) in observed logs within 300s.",
+      "involved_events": [
+        "redteam.txt.gz:2",
+        "auth.txt.gz:26",
+        "auth.txt.gz:27",
+        "auth.txt.gz:28",
+        "auth.txt.gz:29",
+        "auth.txt.gz:30",
+        "auth.txt.gz:31",
+        "auth.txt.gz:32",
+        "proc.txt.gz:26",
+        "proc.txt.gz:27",
+        "dns.txt.gz:26",
+        "flows.txt.gz:26",
+        "flows.txt.gz:27",
+        "proc.txt.gz:29",
+        "auth.txt.gz:33",
+        "proc.txt.gz:28"
+      ],
+      "involved_users": [
+        "U999@DOM1"
+      ],
+      "involved_hosts": [
+        "C9999_EXFIL",
+        "C800",
+        "C553",
+        "C17693"
+      ],
+      "evidence_sources": [
+        {
+          "file": "redteam.txt.gz",
+          "line": 2
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 28
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 30
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 31
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 32
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "dns.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "flows.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "flows.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 33
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 28
+        }
+      ],
+      "start_time": 600,
+      "end_time": 725,
+      "recommendation": "Compare defense detection rules against this confirmed baseline to calibrate sensitivity and false-negative rates."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "FIND-AUTH-BF-auth.txt.gz:32",
+      "title": "Multiple Authentication Failures Preceding Successful Logon (7 fails)",
+      "severity": "HIGH",
+      "category": "AUTH_ANOMALY",
+      "confidence_level": "ANALYTICAL_FINDING",
+      "reason": "Host 'C553' received 7 failed logon attempts within 300s before a successful logon by user 'U999@DOM1'. This temporal sequence is consistent with credential guessing, password spraying, or misconfiguration.",
+      "involved_events": [
+        "auth.txt.gz:31",
+        "auth.txt.gz:30",
+        "auth.txt.gz:29",
+        "auth.txt.gz:34",
+        "auth.txt.gz:28",
+        "auth.txt.gz:27",
+        "auth.txt.gz:26",
+        "auth.txt.gz:32"
+      ],
+      "involved_users": [
+        "U999@DOM1"
+      ],
+      "involved_hosts": [
+        "C17693",
+        "C553"
+      ],
+      "evidence_sources": [
+        {
+          "file": "auth.txt.gz",
+          "line": 31
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 30
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 34
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 28
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 32
+        }
+      ],
+      "start_time": 600,
+      "end_time": 635,
+      "recommendation": "Review the source IP/host, verify if the user legitimately attempted login, and inspect for secondary access tokens."
+    },
+    {
+      "finding_id": "FIND-AUTH-BF-auth.txt.gz:33",
+      "title": "Multiple Authentication Failures Preceding Successful Logon (6 fails)",
+      "severity": "HIGH",
+      "category": "AUTH_ANOMALY",
+      "confidence_level": "ANALYTICAL_FINDING",
+      "reason": "Host 'C800' received 6 failed logon attempts within 300s before a successful logon by user 'U999@DOM1'. This temporal sequence is consistent with credential guessing, password spraying, or misconfiguration.",
+      "involved_events": [
+        "auth.txt.gz:31",
+        "auth.txt.gz:30",
+        "auth.txt.gz:29",
+        "auth.txt.gz:28",
+        "auth.txt.gz:27",
+        "auth.txt.gz:26",
+        "auth.txt.gz:33"
+      ],
+      "involved_users": [
+        "U999@DOM1"
+      ],
+      "involved_hosts": [
+        "C17693",
+        "C800",
+        "C553"
+      ],
+      "evidence_sources": [
+        {
+          "file": "auth.txt.gz",
+          "line": 31
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 30
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 28
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 33
+        }
+      ],
+      "start_time": 600,
+      "end_time": 720,
+      "recommendation": "Review the source IP/host, verify if the user legitimately attempted login, and inspect for secondary access tokens."
+    },
+    {
+      "finding_id": "FIND-PROC-EXEC-auth.txt.gz:32",
+      "title": "Suspicious Process Execution Followed Remote Authentication",
+      "severity": "HIGH",
+      "category": "PROCESS_ANOMALY",
+      "confidence_level": "ANALYTICAL_FINDING",
+      "reason": "Immediately after user 'U999@DOM1' logged onto 'C553' at t=635, 3 command execution / reconnaissance process(es) were launched (cmd.exe, powershell_recon.exe, vssadmin.exe).",
+      "involved_events": [
+        "auth.txt.gz:32",
+        "proc.txt.gz:26",
+        "proc.txt.gz:27",
+        "proc.txt.gz:28"
+      ],
+      "involved_users": [
+        "U999@DOM1"
+      ],
+      "involved_hosts": [
+        "C800",
+        "C553",
+        "C17693"
+      ],
+      "evidence_sources": [
+        {
+          "file": "auth.txt.gz",
+          "line": 32
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 28
+        }
+      ],
+      "start_time": 635,
+      "end_time": 725,
+      "recommendation": "Isolate endpoint, inspect command-line arguments and parent process tree, and capture volatile memory if warranted."
+    },
+    {
+      "finding_id": "FIND-PROC-EXEC-auth.txt.gz:33",
+      "title": "Suspicious Process Execution Followed Remote Authentication",
+      "severity": "HIGH",
+      "category": "PROCESS_ANOMALY",
+      "confidence_level": "ANALYTICAL_FINDING",
+      "reason": "Immediately after user 'U999@DOM1' logged onto 'C800' at t=720, 1 command execution / reconnaissance process(es) were launched (vssadmin.exe).",
+      "involved_events": [
+        "auth.txt.gz:33",
+        "proc.txt.gz:28"
+      ],
+      "involved_users": [
+        "U999@DOM1"
+      ],
+      "involved_hosts": [
+        "C800",
+        "C553"
+      ],
+      "evidence_sources": [
+        {
+          "file": "auth.txt.gz",
+          "line": 33
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 28
+        }
+      ],
+      "start_time": 720,
+      "end_time": 725,
+      "recommendation": "Isolate endpoint, inspect command-line arguments and parent process tree, and capture volatile memory if warranted."
+    },
+    {
+      "finding_id": "FIND-NET-SPIKE-dns.txt.gz:26",
+      "title": "Large Outbound Flow Preceded by DNS Resolution (Potential Data Exfiltration)",
+      "severity": "CRITICAL",
+      "category": "EXFILTRATION",
+      "confidence_level": "HYPOTHESIS",
+      "reason": "Host 'C553' resolved 'C9999_EXFIL' at t=658, followed by a high-volume network flow of 98,500,000 bytes to 'C9999_EXFIL' at t=660.",
+      "involved_events": [
+        "dns.txt.gz:26",
+        "flows.txt.gz:26"
+      ],
+      "involved_users": [],
+      "involved_hosts": [
+        "C553",
+        "C9999_EXFIL"
+      ],
+      "evidence_sources": [
+        {
+          "file": "dns.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "flows.txt.gz",
+          "line": 26
+        }
+      ],
+      "start_time": 658,
+      "end_time": 660,
+      "recommendation": "Inspect network capture, examine destination endpoint reputation, and check data transfer authorization."
+    },
+    {
+      "finding_id": "FIND-LAT-MOV-U103@DOM1-100",
+      "title": "Rapid Multi-Host Logons for User U103@DOM1 (Potential Lateral Movement)",
+      "severity": "HIGH",
+      "category": "LATERAL_MOVEMENT",
+      "confidence_level": "ANALYTICAL_FINDING",
+      "reason": "User 'U103@DOM1' successfully logged into 4 distinct hosts (C101, C103, C102, C200) within 300s.",
+      "involved_events": [
+        "auth.txt.gz:1",
+        "auth.txt.gz:3",
+        "auth.txt.gz:4",
+        "auth.txt.gz:5",
+        "auth.txt.gz:7",
+        "auth.txt.gz:10",
+        "auth.txt.gz:11",
+        "auth.txt.gz:15"
+      ],
+      "involved_users": [
+        "U103@DOM1"
+      ],
+      "involved_hosts": [
+        "C101",
+        "C103",
+        "C102",
+        "C200"
+      ],
+      "evidence_sources": [
+        {
+          "file": "auth.txt.gz",
+          "line": 1
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 3
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 4
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 5
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 7
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 10
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 11
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 15
+        }
+      ],
+      "start_time": 100,
+      "end_time": 332,
+      "recommendation": "Check if this account is a service account or domain administrator, and verify if multi-system hop is legitimate."
+    },
+    {
+      "finding_id": "FIND-LAT-MOV-U102@DOM1-123",
+      "title": "Rapid Multi-Host Logons for User U102@DOM1 (Potential Lateral Movement)",
+      "severity": "HIGH",
+      "category": "LATERAL_MOVEMENT",
+      "confidence_level": "ANALYTICAL_FINDING",
+      "reason": "User 'U102@DOM1' successfully logged into 4 distinct hosts (C101, C103, C102, C200) within 300s.",
+      "involved_events": [
+        "auth.txt.gz:2",
+        "auth.txt.gz:8",
+        "auth.txt.gz:9",
+        "auth.txt.gz:12",
+        "auth.txt.gz:13",
+        "auth.txt.gz:14",
+        "auth.txt.gz:16"
+      ],
+      "involved_users": [
+        "U102@DOM1"
+      ],
+      "involved_hosts": [
+        "C101",
+        "C103",
+        "C102",
+        "C200"
+      ],
+      "evidence_sources": [
+        {
+          "file": "auth.txt.gz",
+          "line": 2
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 8
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 9
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 12
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 13
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 14
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 16
+        }
+      ],
+      "start_time": 123,
+      "end_time": 354,
+      "recommendation": "Check if this account is a service account or domain administrator, and verify if multi-system hop is legitimate."
+    },
+    {
+      "finding_id": "FIND-GROUNDTRUTH-redteam.txt.gz:1",
+      "title": "LANL Ground Truth Red Team Activity Matched (Host: C553)",
+      "severity": "CRITICAL",
+      "category": "GROUND_TRUTH",
+      "confidence_level": "CONFIRMED_GROUND_TRUTH",
+      "reason": "Official LANL red-team log confirms attack simulation at relative time t=635 involving User: 'U999@DOM1', Source: 'C17693', Destination: 'C553'. Found 13 corresponding system event(s) in observed logs within 300s.",
+      "involved_events": [
+        "redteam.txt.gz:1",
+        "auth.txt.gz:26",
+        "auth.txt.gz:27",
+        "auth.txt.gz:28",
+        "auth.txt.gz:34",
+        "auth.txt.gz:29",
+        "auth.txt.gz:30",
+        "auth.txt.gz:31",
+        "auth.txt.gz:32",
+        "proc.txt.gz:26",
+        "proc.txt.gz:27",
+        "proc.txt.gz:29",
+        "auth.txt.gz:33",
+        "proc.txt.gz:28"
+      ],
+      "involved_users": [
+        "U999@DOM1"
+      ],
+      "involved_hosts": [
+        "C800",
+        "C553",
+        "C17693"
+      ],
+      "evidence_sources": [
+        {
+          "file": "redteam.txt.gz",
+          "line": 1
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 28
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 34
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 30
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 31
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 32
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 33
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 28
+        }
+      ],
+      "start_time": 600,
+      "end_time": 725,
+      "recommendation": "Compare defense detection rules against this confirmed baseline to calibrate sensitivity and false-negative rates."
+    },
+    {
+      "finding_id": "FIND-GROUNDTRUTH-redteam.txt.gz:2",
+      "title": "LANL Ground Truth Red Team Activity Matched (Host: C800)",
+      "severity": "CRITICAL",
+      "category": "GROUND_TRUTH",
+      "confidence_level": "CONFIRMED_GROUND_TRUTH",
+      "reason": "Official LANL red-team log confirms attack simulation at relative time t=720 involving User: 'U999@DOM1', Source: 'C553', Destination: 'C800'. Found 15 corresponding system event(s) in observed logs within 300s.",
+      "involved_events": [
+        "redteam.txt.gz:2",
+        "auth.txt.gz:26",
+        "auth.txt.gz:27",
+        "auth.txt.gz:28",
+        "auth.txt.gz:29",
+        "auth.txt.gz:30",
+        "auth.txt.gz:31",
+        "auth.txt.gz:32",
+        "proc.txt.gz:26",
+        "proc.txt.gz:27",
+        "dns.txt.gz:26",
+        "flows.txt.gz:26",
+        "flows.txt.gz:27",
+        "proc.txt.gz:29",
+        "auth.txt.gz:33",
+        "proc.txt.gz:28"
+      ],
+      "involved_users": [
+        "U999@DOM1"
+      ],
+      "involved_hosts": [
+        "C9999_EXFIL",
+        "C800",
+        "C553",
+        "C17693"
+      ],
+      "evidence_sources": [
+        {
+          "file": "redteam.txt.gz",
+          "line": 2
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 28
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 30
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 31
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 32
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "dns.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "flows.txt.gz",
+          "line": 26
+        },
+        {
+          "file": "flows.txt.gz",
+          "line": 27
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 29
+        },
+        {
+          "file": "auth.txt.gz",
+          "line": 33
+        },
+        {
+          "file": "proc.txt.gz",
+          "line": 28
+        }
+      ],
+      "start_time": 600,
+      "end_time": 725,
+      "recommendation": "Compare defense detection rules against this confirmed baseline to calibrate sensitivity and false-negative rates."
+    }
+  ],
+  "timeline_key_events": [
+    {
+      "event_id": "auth.txt.gz:1",
+      "timestamp": 100,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U103@DOM1",
+      "src_host": "C103",
+      "dst_host": "C103",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 1,
+      "raw_line": "100,U103@DOM1,U103@DOM1,C103,C103,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:2",
+      "timestamp": 123,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U102@DOM1",
+      "src_host": "C101",
+      "dst_host": "C102",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 2,
+      "raw_line": "123,U102@DOM1,U102@DOM1,C101,C102,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:3",
+      "timestamp": 134,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U103@DOM1",
+      "src_host": "C200",
+      "dst_host": "C200",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 3,
+      "raw_line": "134,U103@DOM1,U103@DOM1,C200,C200,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:4",
+      "timestamp": 146,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U103@DOM1",
+      "src_host": "C200",
+      "dst_host": "C103",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 4,
+      "raw_line": "146,U103@DOM1,U103@DOM1,C200,C103,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:5",
+      "timestamp": 160,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U103@DOM1",
+      "src_host": "C101",
+      "dst_host": "C102",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 5,
+      "raw_line": "160,U103@DOM1,U103@DOM1,C101,C102,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:7",
+      "timestamp": 196,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U103@DOM1",
+      "src_host": "C200",
+      "dst_host": "C200",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 7,
+      "raw_line": "196,U103@DOM1,U103@DOM1,C200,C200,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:8",
+      "timestamp": 214,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U102@DOM1",
+      "src_host": "C101",
+      "dst_host": "C103",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 8,
+      "raw_line": "214,U102@DOM1,U102@DOM1,C101,C103,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:9",
+      "timestamp": 230,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U102@DOM1",
+      "src_host": "C200",
+      "dst_host": "C102",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 9,
+      "raw_line": "230,U102@DOM1,U102@DOM1,C200,C102,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:10",
+      "timestamp": 241,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U103@DOM1",
+      "src_host": "C200",
+      "dst_host": "C101",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 10,
+      "raw_line": "241,U103@DOM1,U103@DOM1,C200,C101,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:11",
+      "timestamp": 257,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U103@DOM1",
+      "src_host": "C200",
+      "dst_host": "C200",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 11,
+      "raw_line": "257,U103@DOM1,U103@DOM1,C200,C200,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:12",
+      "timestamp": 278,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U102@DOM1",
+      "src_host": "C101",
+      "dst_host": "C200",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 12,
+      "raw_line": "278,U102@DOM1,U102@DOM1,C101,C200,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:13",
+      "timestamp": 296,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U102@DOM1",
+      "src_host": "C102",
+      "dst_host": "C200",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 13,
+      "raw_line": "296,U102@DOM1,U102@DOM1,C102,C200,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:14",
+      "timestamp": 316,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U102@DOM1",
+      "src_host": "C103",
+      "dst_host": "C200",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 14,
+      "raw_line": "316,U102@DOM1,U102@DOM1,C103,C200,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:15",
+      "timestamp": 332,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U103@DOM1",
+      "src_host": "C200",
+      "dst_host": "C101",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 15,
+      "raw_line": "332,U103@DOM1,U103@DOM1,C200,C101,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:16",
+      "timestamp": 354,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U102@DOM1",
+      "src_host": "C200",
+      "dst_host": "C101",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 16,
+      "raw_line": "354,U102@DOM1,U102@DOM1,C200,C101,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:26",
+      "timestamp": 600,
+      "event_type": "AUTH",
+      "action": "LOGON_FAIL",
+      "user": "U999@DOM1",
+      "src_host": "C17693",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "NTLM",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Fail"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 26,
+      "raw_line": "600,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:27",
+      "timestamp": 605,
+      "event_type": "AUTH",
+      "action": "LOGON_FAIL",
+      "user": "U999@DOM1",
+      "src_host": "C17693",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "NTLM",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Fail"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 27,
+      "raw_line": "605,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:28",
+      "timestamp": 610,
+      "event_type": "AUTH",
+      "action": "LOGON_FAIL",
+      "user": "U999@DOM1",
+      "src_host": "C17693",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "NTLM",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Fail"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 28,
+      "raw_line": "610,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:34",
+      "timestamp": 610,
+      "event_type": "AUTH",
+      "action": "LOGON_FAIL",
+      "user": null,
+      "src_host": "C17693",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": null,
+        "logon_type": null,
+        "auth_orientation": null,
+        "status": "Fail"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 34,
+      "raw_line": "610,?,?,C17693,C553,?,?,?,Fail",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:29",
+      "timestamp": 615,
+      "event_type": "AUTH",
+      "action": "LOGON_FAIL",
+      "user": "U999@DOM1",
+      "src_host": "C17693",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "NTLM",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Fail"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 29,
+      "raw_line": "615,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:30",
+      "timestamp": 620,
+      "event_type": "AUTH",
+      "action": "LOGON_FAIL",
+      "user": "U999@DOM1",
+      "src_host": "C17693",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "NTLM",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Fail"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 30,
+      "raw_line": "620,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "auth.txt.gz:31",
+      "timestamp": 625,
+      "event_type": "AUTH",
+      "action": "LOGON_FAIL",
+      "user": "U999@DOM1",
+      "src_host": "C17693",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "NTLM",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Fail"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 31,
+      "raw_line": "625,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "redteam.txt.gz:1",
+      "timestamp": 635,
+      "event_type": "REDTEAM",
+      "action": "REDTEAM_GROUND_TRUTH",
+      "user": "U999@DOM1",
+      "src_host": "C17693",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "description": "LANL documented red-team exercise activity"
+      },
+      "source_file": "redteam.txt.gz",
+      "line_number": 1,
+      "raw_line": "635,U999@DOM1,C17693,C553",
+      "is_ground_truth": true
+    },
+    {
+      "event_id": "auth.txt.gz:32",
+      "timestamp": 635,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U999@DOM1",
+      "src_host": "C17693",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "NTLM",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 32,
+      "raw_line": "635,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "proc.txt.gz:26",
+      "timestamp": 642,
+      "event_type": "PROCESS",
+      "action": "PROCESS_START",
+      "user": "U999@DOM1",
+      "src_host": "C553",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": "cmd.exe",
+      "details": {
+        "proc_action": "Start"
+      },
+      "source_file": "proc.txt.gz",
+      "line_number": 26,
+      "raw_line": "642,U999@DOM1,C553,cmd.exe,Start",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "proc.txt.gz:27",
+      "timestamp": 645,
+      "event_type": "PROCESS",
+      "action": "PROCESS_START",
+      "user": "U999@DOM1",
+      "src_host": "C553",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": "powershell_recon.exe",
+      "details": {
+        "proc_action": "Start"
+      },
+      "source_file": "proc.txt.gz",
+      "line_number": 27,
+      "raw_line": "645,U999@DOM1,C553,powershell_recon.exe,Start",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "dns.txt.gz:26",
+      "timestamp": 658,
+      "event_type": "DNS",
+      "action": "DNS_QUERY",
+      "user": null,
+      "src_host": "C553",
+      "dst_host": "C9999_EXFIL",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "resolved_host": "C9999_EXFIL"
+      },
+      "source_file": "dns.txt.gz",
+      "line_number": 26,
+      "raw_line": "658,C553,C9999_EXFIL",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "flows.txt.gz:26",
+      "timestamp": 660,
+      "event_type": "NETWORK_FLOW",
+      "action": "FLOW",
+      "user": null,
+      "src_host": "C553",
+      "dst_host": "C9999_EXFIL",
+      "src_port": 50123,
+      "dst_port": 443,
+      "protocol": "6",
+      "process_name": null,
+      "details": {
+        "duration": 180,
+        "packet_count": 15000,
+        "byte_count": 98500000
+      },
+      "source_file": "flows.txt.gz",
+      "line_number": 26,
+      "raw_line": "660,180,C553,50123,C9999_EXFIL,443,6,15000,98500000",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "flows.txt.gz:27",
+      "timestamp": 680,
+      "event_type": "NETWORK_FLOW",
+      "action": "FLOW",
+      "user": null,
+      "src_host": "C553",
+      "dst_host": null,
+      "src_port": null,
+      "dst_port": 80,
+      "protocol": "6",
+      "process_name": null,
+      "details": {
+        "duration": null,
+        "packet_count": null,
+        "byte_count": null
+      },
+      "source_file": "flows.txt.gz",
+      "line_number": 27,
+      "raw_line": "680,?,C553,?,?,80,6,?,?",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "proc.txt.gz:29",
+      "timestamp": 700,
+      "event_type": "PROCESS",
+      "action": "PROCESS_START",
+      "user": null,
+      "src_host": "C553",
+      "dst_host": "C553",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "proc_action": "Start"
+      },
+      "source_file": "proc.txt.gz",
+      "line_number": 29,
+      "raw_line": "700,?,C553,?,Start",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "redteam.txt.gz:2",
+      "timestamp": 720,
+      "event_type": "REDTEAM",
+      "action": "REDTEAM_GROUND_TRUTH",
+      "user": "U999@DOM1",
+      "src_host": "C553",
+      "dst_host": "C800",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "description": "LANL documented red-team exercise activity"
+      },
+      "source_file": "redteam.txt.gz",
+      "line_number": 2,
+      "raw_line": "720,U999@DOM1,C553,C800",
+      "is_ground_truth": true
+    },
+    {
+      "event_id": "auth.txt.gz:33",
+      "timestamp": 720,
+      "event_type": "AUTH",
+      "action": "LOGON_SUCCESS",
+      "user": "U999@DOM1",
+      "src_host": "C553",
+      "dst_host": "C800",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": null,
+      "details": {
+        "auth_type": "Kerberos",
+        "logon_type": "Network",
+        "auth_orientation": "LogOn",
+        "status": "Success"
+      },
+      "source_file": "auth.txt.gz",
+      "line_number": 33,
+      "raw_line": "720,U999@DOM1,U999@DOM1,C553,C800,Kerberos,Network,LogOn,Success",
+      "is_ground_truth": false
+    },
+    {
+      "event_id": "proc.txt.gz:28",
+      "timestamp": 725,
+      "event_type": "PROCESS",
+      "action": "PROCESS_START",
+      "user": "U999@DOM1",
+      "src_host": "C800",
+      "dst_host": "C800",
+      "src_port": null,
+      "dst_port": null,
+      "protocol": null,
+      "process_name": "vssadmin.exe",
+      "details": {
+        "proc_action": "Start"
+      },
+      "source_file": "proc.txt.gz",
+      "line_number": 28,
+      "raw_line": "725,U999@DOM1,C800,vssadmin.exe,Start",
+      "is_ground_truth": false
+    }
+  ],
+  "plausible_explanations": [
+    "Credential Guessing / Brute-Force: An unauthorized entity systematically tested credentials until achieving valid access.",
+    "Post-Exploitation Execution: The actor obtained interactive command shell execution to execute discovery tools.",
+    "Data Exfiltration: Sensitive data staged on the host was transmitted outbound over network sockets."
+  ],
+  "alternative_explanations": [
+    "Benign Misconfiguration: A scheduled service, script, or user with expired credentials repeatedly retried automated authentication.",
+    "Legitimate Administrative Activity: A system administrator or DevOps automation script executed maintenance tasks.",
+    "Routine Backup / File Synchronization: Legitimate file transfers or database synchronization occurred."
+  ],
+  "evidence_limitations": [
+    "Dataset De-identification: LANL dataset uses masked identifiers (e.g., C17693, U620@DOM1) without public IP addresses or full hostnames.",
+    "Process Arguments Missing: Process logs indicate executable names (e.g., cmd.exe) but lack full command-line arguments and parent process GUIDs.",
+    "Temporal Relativity: Timestamps are preserved as relative integer seconds from dataset epoch rather than calendar UTC dates.",
+    "Sampling Boundaries: Any row limits or time sampling configured in ingestion constrain the visibility of precursor or follow-on events.",
+    "Unsupervised ML Boundaries: Isolation Forest scores highlight statistical outliers; they do not prove malicious intent or compromise."
+  ],
+  "defensive_recommendations": [
+    "Audit targeted accounts across Active Directory / Kerberos domain controllers for unauthorized privileges.",
+    "Verify endpoint telemetry on affected hosts for persistence mechanisms (Scheduled Tasks, Registry run keys, WMI subscriptions).",
+    "Review firewall and flow egress records corresponding to identified high-byte transfer timestamps.",
+    "Implement multi-factor authentication (MFA) and lock-out policies to mitigate repetitive credential guessing."
+  ]
+}

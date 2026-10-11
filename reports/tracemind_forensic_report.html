@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceMind AI - Forensic Investigation Report</title>
+    <style>
+        :root {
+            --navy: #0f172a;
+            --blue: #1e3a8a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 30px 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+            border: 1px solid var(--border);
+        }
+        h1, h2, h3 {
+            color: var(--navy);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        h1 {
+            margin-top: 0;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 12px;
+        }
+        .header-meta {
+            color: var(--muted);
+            font-size: 0.9em;
+            margin-bottom: 24px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .stat-box {
+            background: #f1f5f9;
+            padding: 16px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .stat-box .num {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--blue);
+        }
+        .stat-box .label {
+            font-size: 13px;
+            color: var(--muted);
+            text-transform: uppercase;
+        }
+        .finding-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 18px;
+            margin: 16px 0;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .finding-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .badge {
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+        .evidence-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            border-radius: 4px;
+            margin: 12px 0;
+            font-size: 0.9em;
+        }
+        .rec {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 4px solid #10b981;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background: #f1f5f9;
+            color: var(--navy);
+            font-weight: 600;
+        }
+        .tag {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+        code {
+            background: #f1f5f9;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+            font-size: 0.88em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TraceMind AI &mdash; Forensic Investigation Report</h1>
+        <div class="header-meta">
+            Generated: 2026-10-11T08:31:41.411182+00:00 |
+            Engine: TraceMind AI v1.0.0 | Case Reference: Local Forensics Session
+        </div>
+
+        <h2>1. Executive Summary</h2>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="num">119</div>
+                <div class="label">Events Analyzed</div>
+            </div>
+            <div class="stat-box">
+                <div class="num">2</div>
+                <div class="label">Ground Truth Confirmed</div>
+            </div>
+            <div class="stat-box">
+                <div class="num">7</div>
+                <div class="label">Analytical Findings</div>
+            </div>
+            <div class="stat-box">
+                <div class="num">625s</div>
+                <div class="label">Observed Duration</div>
+            </div>
+        </div>
+
+        <h2>2. Correlated Findings & Evidence</h2>
+        
+        <div class="finding-card" style="border-left: 5px solid #ea580c;">
+            <div class="finding-header">
+                <h3>#1: Multiple Authentication Failures Preceding Successful Logon (7 fails)</h3>
+                <span class="badge" style="background-color: #ea580c;">HIGH</span>
+            </div>
+            <p><strong>Confidence:</strong> <code>ANALYTICAL_FINDING</code> | <strong>Category:</strong> AUTH_ANOMALY</p>
+            <p><strong>Time Window:</strong> Relative Seconds 600 &rarr; 635</p>
+            <p><strong>Reasoning:</strong> Host &#x27;C553&#x27; received 7 failed logon attempts within 300s before a successful logon by user &#x27;U999@DOM1&#x27;. This temporal sequence is consistent with credential guessing, password spraying, or misconfiguration.</p>
+            <p><strong>Involved Hosts:</strong> C17693, C553</p>
+            <p><strong>Involved Users:</strong> U999@DOM1</p>
+            <div class="evidence-box">
+                <strong>Supporting Evidence Sources:</strong>
+                <ul><li><code>auth.txt.gz</code> : Line 31</li><li><code>auth.txt.gz</code> : Line 30</li><li><code>auth.txt.gz</code> : Line 29</li><li><code>auth.txt.gz</code> : Line 34</li><li><code>auth.txt.gz</code> : Line 28</li><li><code>auth.txt.gz</code> : Line 27</li></ul>
+            </div>
+            <p class="rec"><strong>Defensive Recommendation:</strong> Review the source IP/host, verify if the user legitimately attempted login, and inspect for secondary access tokens.</p>
+        </div>
+        
+        <div class="finding-card" style="border-left: 5px solid #ea580c;">
+            <div class="finding-header">
+                <h3>#2: Multiple Authentication Failures Preceding Successful Logon (6 fails)</h3>
+                <span class="badge" style="background-color: #ea580c;">HIGH</span>
+            </div>
+            <p><strong>Confidence:</strong> <code>ANALYTICAL_FINDING</code> | <strong>Category:</strong> AUTH_ANOMALY</p>
+            <p><strong>Time Window:</strong> Relative Seconds 600 &rarr; 720</p>
+            <p><strong>Reasoning:</strong> Host &#x27;C800&#x27; received 6 failed logon attempts within 300s before a successful logon by user &#x27;U999@DOM1&#x27;. This temporal sequence is consistent with credential guessing, password spraying, or misconfiguration.</p>
+            <p><strong>Involved Hosts:</strong> C17693, C800, C553</p>
+            <p><strong>Involved Users:</strong> U999@DOM1</p>
+            <div class="evidence-box">
+                <strong>Supporting Evidence Sources:</strong>
+                <ul><li><code>auth.txt.gz</code> : Line 31</li><li><code>auth.txt.gz</code> : Line 30</li><li><code>auth.txt.gz</code> : Line 29</li><li><code>auth.txt.gz</code> : Line 28</li><li><code>auth.txt.gz</code> : Line 27</li><li><code>auth.txt.gz</code> : Line 26</li></ul>
+            </div>
+            <p class="rec"><strong>Defensive Recommendation:</strong> Review the source IP/host, verify if the user legitimately attempted login, and inspect for secondary access tokens.</p>
+        </div>
+        
+        <div class="finding-card" style="border-left: 5px solid #ea580c;">
+            <div class="finding-header">
+                <h3>#3: Suspicious Process Execution Followed Remote Authentication</h3>
+                <span class="badge" style="background-color: #ea580c;">HIGH</span>
+            </div>
+            <p><strong>Confidence:</strong> <code>ANALYTICAL_FINDING</code> | <strong>Category:</strong> PROCESS_ANOMALY</p>
+            <p><strong>Time Window:</strong> Relative Seconds 635 &rarr; 725</p>
+            <p><strong>Reasoning:</strong> Immediately after user &#x27;U999@DOM1&#x27; logged onto &#x27;C553&#x27; at t=635, 3 command execution / reconnaissance process(es) were launched (cmd.exe, powershell_recon.exe, vssadmin.exe).</p>
+            <p><strong>Involved Hosts:</strong> C800, C553, C17693</p>
+            <p><strong>Involved Users:</strong> U999@DOM1</p>
+            <div class="evidence-box">
+                <strong>Supporting Evidence Sources:</strong>
+                <ul><li><code>auth.txt.gz</code> : Line 32</li><li><code>proc.txt.gz</code> : Line 26</li><li><code>proc.txt.gz</code> : Line 27</li><li><code>proc.txt.gz</code> : Line 28</li></ul>
+            </div>
+            <p class="rec"><strong>Defensive Recommendation:</strong> Isolate endpoint, inspect command-line arguments and parent process tree, and capture volatile memory if warranted.</p>
+        </div>
+        
+        <div class="finding-card" style="border-left: 5px solid #ea580c;">
+            <div class="finding-header">
+                <h3>#4: Suspicious Process Execution Followed Remote Authentication</h3>
+                <span class="badge" style="background-color: #ea580c;">HIGH</span>
+            </div>
+            <p><strong>Confidence:</strong> <code>ANALYTICAL_FINDING</code> | <strong>Category:</strong> PROCESS_ANOMALY</p>
+            <p><strong>Time Window:</strong> Relative Seconds 720 &rarr; 725</p>
+            <p><strong>Reasoning:</strong> Immediately after user &#x27;U999@DOM1&#x27; logged onto &#x27;C800&#x27; at t=720, 1 command execution / reconnaissance process(es) were launched (vssadmin.exe).</p>
+            <p><strong>Involved Hosts:</strong> C800, C553</p>
+            <p><strong>Involved Users:</strong> U999@DOM1</p>
+            <div class="evidence-box">
+                <strong>Supporting Evidence Sources:</strong>
+                <ul><li><code>auth.txt.gz</code> : Line 33</li><li><code>proc.txt.gz</code> : Line 28</li></ul>
+            </div>
+            <p class="rec"><strong>Defensive Recommendation:</strong> Isolate endpoint, inspect command-line arguments and parent process tree, and capture volatile memory if warranted.</p>
+        </div>
+        
+        <div class="finding-card" style="border-left: 5px solid #dc2626;">
+            <div class="finding-header">
+                <h3>#5: Large Outbound Flow Preceded by DNS Resolution (Potential Data Exfiltration)</h3>
+                <span class="badge" style="background-color: #dc2626;">CRITICAL</span>
+            </div>
+            <p><strong>Confidence:</strong> <code>HYPOTHESIS</code> | <strong>Category:</strong> EXFILTRATION</p>
+            <p><strong>Time Window:</strong> Relative Seconds 658 &rarr; 660</p>
+            <p><strong>Reasoning:</strong> Host &#x27;C553&#x27; resolved &#x27;C9999_EXFIL&#x27; at t=658, followed by a high-volume network flow of 98,500,000 bytes to &#x27;C9999_EXFIL&#x27; at t=660.</p>
+            <p><strong>Involved Hosts:</strong> C553, C9999_EXFIL</p>
+            <p><strong>Involved Users:</strong> None</p>
+            <div class="evidence-box">
+                <strong>Supporting Evidence Sources:</strong>
+                <ul><li><code>dns.txt.gz</code> : Line 26</li><li><code>flows.txt.gz</code> : Line 26</li></ul>
+            </div>
+            <p class="rec"><strong>Defensive Recommendation:</strong> Inspect network capture, examine destination endpoint reputation, and check data transfer authorization.</p>
+        </div>
+        
+        <div class="finding-card" style="border-left: 5px solid #ea580c;">
+            <div class="finding-header">
+                <h3>#6: Rapid Multi-Host Logons for User U103@DOM1 (Potential Lateral Movement)</h3>
+                <span class="badge" style="background-color: #ea580c;">HIGH</span>
+            </div>
+            <p><strong>Confidence:</strong> <code>ANALYTICAL_FINDING</code> | <strong>Category:</strong> LATERAL_MOVEMENT</p>
+            <p><strong>Time Window:</strong> Relative Seconds 100 &rarr; 332</p>
+            <p><strong>Reasoning:</strong> User &#x27;U103@DOM1&#x27; successfully logged into 4 distinct hosts (C101, C103, C102, C200) within 300s.</p>
+            <p><strong>Involved Hosts:</strong> C101, C103, C102, C200</p>
+            <p><strong>Involved Users:</strong> U103@DOM1</p>
+            <div class="evidence-box">
+                <strong>Supporting Evidence Sources:</strong>
+                <ul><li><code>auth.txt.gz</code> : Line 1</li><li><code>auth.txt.gz</code> : Line 3</li><li><code>auth.txt.gz</code> : Line 4</li><li><code>auth.txt.gz</code> : Line 5</li><li><code>auth.txt.gz</code> : Line 7</li><li><code>auth.txt.gz</code> : Line 10</li></ul>
+            </div>
+            <p class="rec"><strong>Defensive Recommendation:</strong> Check if this account is a service account or domain administrator, and verify if multi-system hop is legitimate.</p>
+        </div>
+        
+        <div class="finding-card" style="border-left: 5px solid #ea580c;">
+            <div class="finding-header">
+                <h3>#7: Rapid Multi-Host Logons for User U102@DOM1 (Potential Lateral Movement)</h3>
+                <span class="badge" style="background-color: #ea580c;">HIGH</span>
+            </div>
+            <p><strong>Confidence:</strong> <code>ANALYTICAL_FINDING</code> | <strong>Category:</strong> LATERAL_MOVEMENT</p>
+            <p><strong>Time Window:</strong> Relative Seconds 123 &rarr; 354</p>
+            <p><strong>Reasoning:</strong> User &#x27;U102@DOM1&#x27; successfully logged into 4 distinct hosts (C101, C103, C102, C200) within 300s.</p>
+            <p><strong>Involved Hosts:</strong> C101, C103, C102, C200</p>
+            <p><strong>Involved Users:</strong> U102@DOM1</p>
+            <div class="evidence-box">
+                <strong>Supporting Evidence Sources:</strong>
+                <ul><li><code>auth.txt.gz</code> : Line 2</li><li><code>auth.txt.gz</code> : Line 8</li><li><code>auth.txt.gz</code> : Line 9</li><li><code>auth.txt.gz</code> : Line 12</li><li><code>auth.txt.gz</code> : Line 13</li><li><code>auth.txt.gz</code> : Line 14</li></ul>
+            </div>
+            <p class="rec"><strong>Defensive Recommendation:</strong> Check if this account is a service account or domain administrator, and verify if multi-system hop is legitimate.</p>
+        </div>
+        
+        <div class="finding-card" style="border-left: 5px solid #dc2626;">
+            <div class="finding-header">
+                <h3>#8: LANL Ground Truth Red Team Activity Matched (Host: C553)</h3>
+                <span class="badge" style="background-color: #dc2626;">CRITICAL</span>
+            </div>
+            <p><strong>Confidence:</strong> <code>CONFIRMED_GROUND_TRUTH</code> | <strong>Category:</strong> GROUND_TRUTH</p>
+            <p><strong>Time Window:</strong> Relative Seconds 600 &rarr; 725</p>
+            <p><strong>Reasoning:</strong> Official LANL red-team log confirms attack simulation at relative time t=635 involving User: &#x27;U999@DOM1&#x27;, Source: &#x27;C17693&#x27;, Destination: &#x27;C553&#x27;. Found 13 corresponding system event(s) in observed logs within 300s.</p>
+            <p><strong>Involved Hosts:</strong> C800, C553, C17693</p>
+            <p><strong>Involved Users:</strong> U999@DOM1</p>
+            <div class="evidence-box">
+                <strong>Supporting Evidence Sources:</strong>
+                <ul><li><code>redteam.txt.gz</code> : Line 1</li><li><code>auth.txt.gz</code> : Line 26</li><li><code>auth.txt.gz</code> : Line 27</li><li><code>auth.txt.gz</code> : Line 28</li><li><code>auth.txt.gz</code> : Line 34</li><li><code>auth.txt.gz</code> : Line 29</li></ul>
+            </div>
+            <p class="rec"><strong>Defensive Recommendation:</strong> Compare defense detection rules against this confirmed baseline to calibrate sensitivity and false-negative rates.</p>
+        </div>
+        
+        <div class="finding-card" style="border-left: 5px solid #dc2626;">
+            <div class="finding-header">
+                <h3>#9: LANL Ground Truth Red Team Activity Matched (Host: C800)</h3>
+                <span class="badge" style="background-color: #dc2626;">CRITICAL</span>
+            </div>
+            <p><strong>Confidence:</strong> <code>CONFIRMED_GROUND_TRUTH</code> | <strong>Category:</strong> GROUND_TRUTH</p>
+            <p><strong>Time Window:</strong> Relative Seconds 600 &rarr; 725</p>
+            <p><strong>Reasoning:</strong> Official LANL red-team log confirms attack simulation at relative time t=720 involving User: &#x27;U999@DOM1&#x27;, Source: &#x27;C553&#x27;, Destination: &#x27;C800&#x27;. Found 15 corresponding system event(s) in observed logs within 300s.</p>
+            <p><strong>Involved Hosts:</strong> C9999_EXFIL, C800, C553, C17693</p>
+            <p><strong>Involved Users:</strong> U999@DOM1</p>
+            <div class="evidence-box">
+                <strong>Supporting Evidence Sources:</strong>
+                <ul><li><code>redteam.txt.gz</code> : Line 2</li><li><code>auth.txt.gz</code> : Line 26</li><li><code>auth.txt.gz</code> : Line 27</li><li><code>auth.txt.gz</code> : Line 28</li><li><code>auth.txt.gz</code> : Line 29</li><li><code>auth.txt.gz</code> : Line 30</li></ul>
+            </div>
+            <p class="rec"><strong>Defensive Recommendation:</strong> Compare defense detection rules against this confirmed baseline to calibrate sensitivity and false-negative rates.</p>
+        </div>
+        
+
+        <h2>3. Key Evidentiary Event Timeline</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time (s)</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                    <th>User</th>
+                    <th>Src Host</th>
+                    <th>Dst Host</th>
+                    <th>Source Reference</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td>100</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U103@DOM1</td>
+            <td>C103</td>
+            <td>C103</td>
+            <td><code>auth.txt.gz:1</code></td>
+        </tr>
+        
+        <tr>
+            <td>123</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U102@DOM1</td>
+            <td>C101</td>
+            <td>C102</td>
+            <td><code>auth.txt.gz:2</code></td>
+        </tr>
+        
+        <tr>
+            <td>134</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U103@DOM1</td>
+            <td>C200</td>
+            <td>C200</td>
+            <td><code>auth.txt.gz:3</code></td>
+        </tr>
+        
+        <tr>
+            <td>146</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U103@DOM1</td>
+            <td>C200</td>
+            <td>C103</td>
+            <td><code>auth.txt.gz:4</code></td>
+        </tr>
+        
+        <tr>
+            <td>160</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U103@DOM1</td>
+            <td>C101</td>
+            <td>C102</td>
+            <td><code>auth.txt.gz:5</code></td>
+        </tr>
+        
+        <tr>
+            <td>196</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U103@DOM1</td>
+            <td>C200</td>
+            <td>C200</td>
+            <td><code>auth.txt.gz:7</code></td>
+        </tr>
+        
+        <tr>
+            <td>214</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U102@DOM1</td>
+            <td>C101</td>
+            <td>C103</td>
+            <td><code>auth.txt.gz:8</code></td>
+        </tr>
+        
+        <tr>
+            <td>230</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U102@DOM1</td>
+            <td>C200</td>
+            <td>C102</td>
+            <td><code>auth.txt.gz:9</code></td>
+        </tr>
+        
+        <tr>
+            <td>241</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U103@DOM1</td>
+            <td>C200</td>
+            <td>C101</td>
+            <td><code>auth.txt.gz:10</code></td>
+        </tr>
+        
+        <tr>
+            <td>257</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U103@DOM1</td>
+            <td>C200</td>
+            <td>C200</td>
+            <td><code>auth.txt.gz:11</code></td>
+        </tr>
+        
+        <tr>
+            <td>278</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U102@DOM1</td>
+            <td>C101</td>
+            <td>C200</td>
+            <td><code>auth.txt.gz:12</code></td>
+        </tr>
+        
+        <tr>
+            <td>296</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U102@DOM1</td>
+            <td>C102</td>
+            <td>C200</td>
+            <td><code>auth.txt.gz:13</code></td>
+        </tr>
+        
+        <tr>
+            <td>316</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U102@DOM1</td>
+            <td>C103</td>
+            <td>C200</td>
+            <td><code>auth.txt.gz:14</code></td>
+        </tr>
+        
+        <tr>
+            <td>332</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U103@DOM1</td>
+            <td>C200</td>
+            <td>C101</td>
+            <td><code>auth.txt.gz:15</code></td>
+        </tr>
+        
+        <tr>
+            <td>354</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U102@DOM1</td>
+            <td>C200</td>
+            <td>C101</td>
+            <td><code>auth.txt.gz:16</code></td>
+        </tr>
+        
+        <tr>
+            <td>600</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_FAIL</td>
+            <td>U999@DOM1</td>
+            <td>C17693</td>
+            <td>C553</td>
+            <td><code>auth.txt.gz:26</code></td>
+        </tr>
+        
+        <tr>
+            <td>605</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_FAIL</td>
+            <td>U999@DOM1</td>
+            <td>C17693</td>
+            <td>C553</td>
+            <td><code>auth.txt.gz:27</code></td>
+        </tr>
+        
+        <tr>
+            <td>610</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_FAIL</td>
+            <td>U999@DOM1</td>
+            <td>C17693</td>
+            <td>C553</td>
+            <td><code>auth.txt.gz:28</code></td>
+        </tr>
+        
+        <tr>
+            <td>610</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_FAIL</td>
+            <td>-</td>
+            <td>C17693</td>
+            <td>C553</td>
+            <td><code>auth.txt.gz:34</code></td>
+        </tr>
+        
+        <tr>
+            <td>615</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_FAIL</td>
+            <td>U999@DOM1</td>
+            <td>C17693</td>
+            <td>C553</td>
+            <td><code>auth.txt.gz:29</code></td>
+        </tr>
+        
+        <tr>
+            <td>620</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_FAIL</td>
+            <td>U999@DOM1</td>
+            <td>C17693</td>
+            <td>C553</td>
+            <td><code>auth.txt.gz:30</code></td>
+        </tr>
+        
+        <tr>
+            <td>625</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_FAIL</td>
+            <td>U999@DOM1</td>
+            <td>C17693</td>
+            <td>C553</td>
+            <td><code>auth.txt.gz:31</code></td>
+        </tr>
+        
+        <tr>
+            <td>635</td>
+            <td><span class="tag">REDTEAM</span></td>
+            <td>REDTEAM_GROUND_TRUTH</td>
+            <td>U999@DOM1</td>
+            <td>C17693</td>
+            <td>C553</td>
+            <td><code>redteam.txt.gz:1</code></td>
+        </tr>
+        
+        <tr>
+            <td>635</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U999@DOM1</td>
+            <td>C17693</td>
+            <td>C553</td>
+            <td><code>auth.txt.gz:32</code></td>
+        </tr>
+        
+        <tr>
+            <td>642</td>
+            <td><span class="tag">PROCESS</span></td>
+            <td>PROCESS_START</td>
+            <td>U999@DOM1</td>
+            <td>C553</td>
+            <td>C553</td>
+            <td><code>proc.txt.gz:26</code></td>
+        </tr>
+        
+        <tr>
+            <td>645</td>
+            <td><span class="tag">PROCESS</span></td>
+            <td>PROCESS_START</td>
+            <td>U999@DOM1</td>
+            <td>C553</td>
+            <td>C553</td>
+            <td><code>proc.txt.gz:27</code></td>
+        </tr>
+        
+        <tr>
+            <td>658</td>
+            <td><span class="tag">DNS</span></td>
+            <td>DNS_QUERY</td>
+            <td>-</td>
+            <td>C553</td>
+            <td>C9999_EXFIL</td>
+            <td><code>dns.txt.gz:26</code></td>
+        </tr>
+        
+        <tr>
+            <td>660</td>
+            <td><span class="tag">NETWORK_FLOW</span></td>
+            <td>FLOW</td>
+            <td>-</td>
+            <td>C553</td>
+            <td>C9999_EXFIL</td>
+            <td><code>flows.txt.gz:26</code></td>
+        </tr>
+        
+        <tr>
+            <td>680</td>
+            <td><span class="tag">NETWORK_FLOW</span></td>
+            <td>FLOW</td>
+            <td>-</td>
+            <td>C553</td>
+            <td>-</td>
+            <td><code>flows.txt.gz:27</code></td>
+        </tr>
+        
+        <tr>
+            <td>700</td>
+            <td><span class="tag">PROCESS</span></td>
+            <td>PROCESS_START</td>
+            <td>-</td>
+            <td>C553</td>
+            <td>C553</td>
+            <td><code>proc.txt.gz:29</code></td>
+        </tr>
+        
+        <tr>
+            <td>720</td>
+            <td><span class="tag">REDTEAM</span></td>
+            <td>REDTEAM_GROUND_TRUTH</td>
+            <td>U999@DOM1</td>
+            <td>C553</td>
+            <td>C800</td>
+            <td><code>redteam.txt.gz:2</code></td>
+        </tr>
+        
+        <tr>
+            <td>720</td>
+            <td><span class="tag">AUTH</span></td>
+            <td>LOGON_SUCCESS</td>
+            <td>U999@DOM1</td>
+            <td>C553</td>
+            <td>C800</td>
+            <td><code>auth.txt.gz:33</code></td>
+        </tr>
+        
+        <tr>
+            <td>725</td>
+            <td><span class="tag">PROCESS</span></td>
+            <td>PROCESS_START</td>
+            <td>U999@DOM1</td>
+            <td>C800</td>
+            <td>C800</td>
+            <td><code>proc.txt.gz:28</code></td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <h2>4. Chain of Custody & File Provenance</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>File</th>
+                    <th>SHA-256 Digest</th>
+                    <th>Record Count</th>
+                    <th>File Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td><code>auth.txt.gz</code></td>
+            <td><code>59d0c4d8f5ac3aa1894ad90e...</code></td>
+            <td>35</td>
+            <td>365 bytes</td>
+        </tr>
+        
+        <tr>
+            <td><code>proc.txt.gz</code></td>
+            <td><code>5bdac054625456b7f8851e3c...</code></td>
+            <td>29</td>
+            <td>299 bytes</td>
+        </tr>
+        
+        <tr>
+            <td><code>flows.txt.gz</code></td>
+            <td><code>f431a225a4e9ba83a0a624ba...</code></td>
+            <td>27</td>
+            <td>237 bytes</td>
+        </tr>
+        
+        <tr>
+            <td><code>dns.txt.gz</code></td>
+            <td><code>bf2942b7bfed59572d0c25d5...</code></td>
+            <td>26</td>
+            <td>175 bytes</td>
+        </tr>
+        
+        <tr>
+            <td><code>redteam.txt.gz</code></td>
+            <td><code>4cb567b5e18df67712cb6fd7...</code></td>
+            <td>2</td>
+            <td>79 bytes</td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <hr style="margin-top: 40px; border: 0; border-top: 1px solid var(--border);">
+        <p style="font-size: 0.8em; color: var(--muted); text-align: center;">
+            TraceMind AI Digital Forensics &bull; Confidential Investigation Artifact &bull; Defense Use Only
+        </p>
+    </div>
+</body>
+</html>

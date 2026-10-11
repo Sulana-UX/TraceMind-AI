@@ -1,0 +1,27 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+
+# Large Datasets & Compressed Evidence
+*.gz
+*.tar
+*.zip
+*.bin
+!data/synthetic/*.gz
+!redteam.txt.gz
+data/lanl_raw/
+data/large/
+
+# Test & IDE
+.pytest_cache/
+.vscode/
+.idea/
+
+# Reports & exports
+reports/exported/
+*.log

@@ -1,0 +1,120 @@
+event_id,timestamp,event_type,action,user,src_host,dst_host,src_port,dst_port,protocol,process_name,details,source_file,line_number,raw_line,is_ground_truth
+auth.txt.gz:1,100,AUTH,LOGON_SUCCESS,U103@DOM1,C103,C103,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,1,"100,U103@DOM1,U103@DOM1,C103,C103,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:2,123,AUTH,LOGON_SUCCESS,U102@DOM1,C101,C102,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,2,"123,U102@DOM1,U102@DOM1,C101,C102,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:3,134,AUTH,LOGON_SUCCESS,U103@DOM1,C200,C200,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,3,"134,U103@DOM1,U103@DOM1,C200,C200,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:4,146,AUTH,LOGON_SUCCESS,U103@DOM1,C200,C103,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,4,"146,U103@DOM1,U103@DOM1,C200,C103,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:5,160,AUTH,LOGON_SUCCESS,U103@DOM1,C101,C102,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,5,"160,U103@DOM1,U103@DOM1,C101,C102,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:6,184,AUTH,LOGON_SUCCESS,U101@DOM1,C102,C200,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,6,"184,U101@DOM1,U101@DOM1,C102,C200,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:7,196,AUTH,LOGON_SUCCESS,U103@DOM1,C200,C200,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,7,"196,U103@DOM1,U103@DOM1,C200,C200,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:8,214,AUTH,LOGON_SUCCESS,U102@DOM1,C101,C103,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,8,"214,U102@DOM1,U102@DOM1,C101,C103,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:9,230,AUTH,LOGON_SUCCESS,U102@DOM1,C200,C102,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,9,"230,U102@DOM1,U102@DOM1,C200,C102,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:10,241,AUTH,LOGON_SUCCESS,U103@DOM1,C200,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,10,"241,U103@DOM1,U103@DOM1,C200,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:11,257,AUTH,LOGON_SUCCESS,U103@DOM1,C200,C200,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,11,"257,U103@DOM1,U103@DOM1,C200,C200,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:12,278,AUTH,LOGON_SUCCESS,U102@DOM1,C101,C200,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,12,"278,U102@DOM1,U102@DOM1,C101,C200,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:13,296,AUTH,LOGON_SUCCESS,U102@DOM1,C102,C200,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,13,"296,U102@DOM1,U102@DOM1,C102,C200,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:14,316,AUTH,LOGON_SUCCESS,U102@DOM1,C103,C200,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,14,"316,U102@DOM1,U102@DOM1,C103,C200,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:15,332,AUTH,LOGON_SUCCESS,U103@DOM1,C200,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,15,"332,U103@DOM1,U103@DOM1,C200,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:16,354,AUTH,LOGON_SUCCESS,U102@DOM1,C200,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,16,"354,U102@DOM1,U102@DOM1,C200,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:17,369,AUTH,LOGON_SUCCESS,U100@DOM1,C200,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,17,"369,U100@DOM1,U100@DOM1,C200,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:18,388,AUTH,LOGON_SUCCESS,U100@DOM1,C102,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,18,"388,U100@DOM1,U100@DOM1,C102,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:19,407,AUTH,LOGON_SUCCESS,U100@DOM1,C101,C102,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,19,"407,U100@DOM1,U100@DOM1,C101,C102,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:20,418,AUTH,LOGON_SUCCESS,U101@DOM1,C102,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,20,"418,U101@DOM1,U101@DOM1,C102,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:21,435,AUTH,LOGON_SUCCESS,U103@DOM1,C103,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,21,"435,U103@DOM1,U103@DOM1,C103,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:22,449,AUTH,LOGON_SUCCESS,U103@DOM1,C103,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,22,"449,U103@DOM1,U103@DOM1,C103,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:23,466,AUTH,LOGON_SUCCESS,U102@DOM1,C101,C103,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,23,"466,U102@DOM1,U102@DOM1,C101,C103,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:24,482,AUTH,LOGON_SUCCESS,U100@DOM1,C102,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,24,"482,U100@DOM1,U100@DOM1,C102,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:25,505,AUTH,LOGON_SUCCESS,U101@DOM1,C103,C101,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,25,"505,U101@DOM1,U101@DOM1,C103,C101,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:26,600,AUTH,LOGON_FAIL,U999@DOM1,C17693,C553,,,,,"{'auth_type': 'NTLM', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Fail'}",auth.txt.gz,26,"600,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",False
+auth.txt.gz:27,605,AUTH,LOGON_FAIL,U999@DOM1,C17693,C553,,,,,"{'auth_type': 'NTLM', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Fail'}",auth.txt.gz,27,"605,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",False
+auth.txt.gz:28,610,AUTH,LOGON_FAIL,U999@DOM1,C17693,C553,,,,,"{'auth_type': 'NTLM', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Fail'}",auth.txt.gz,28,"610,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",False
+auth.txt.gz:29,615,AUTH,LOGON_FAIL,U999@DOM1,C17693,C553,,,,,"{'auth_type': 'NTLM', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Fail'}",auth.txt.gz,29,"615,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",False
+auth.txt.gz:30,620,AUTH,LOGON_FAIL,U999@DOM1,C17693,C553,,,,,"{'auth_type': 'NTLM', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Fail'}",auth.txt.gz,30,"620,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",False
+auth.txt.gz:31,625,AUTH,LOGON_FAIL,U999@DOM1,C17693,C553,,,,,"{'auth_type': 'NTLM', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Fail'}",auth.txt.gz,31,"625,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Fail",False
+auth.txt.gz:32,635,AUTH,LOGON_SUCCESS,U999@DOM1,C17693,C553,,,,,"{'auth_type': 'NTLM', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,32,"635,U999@DOM1,U999@DOM1,C17693,C553,NTLM,Network,LogOn,Success",False
+auth.txt.gz:33,720,AUTH,LOGON_SUCCESS,U999@DOM1,C553,C800,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,33,"720,U999@DOM1,U999@DOM1,C553,C800,Kerberos,Network,LogOn,Success",False
+auth.txt.gz:34,610,AUTH,LOGON_FAIL,,C17693,C553,,,,,"{'auth_type': None, 'logon_type': None, 'auth_orientation': None, 'status': 'Fail'}",auth.txt.gz,34,"610,?,?,C17693,C553,?,?,?,Fail",False
+auth.txt.gz:36,550,AUTH,LOGON_SUCCESS,U100@DOM1,C101,C102,,,,,"{'auth_type': 'Kerberos', 'logon_type': 'Network', 'auth_orientation': 'LogOn', 'status': 'Success'}",auth.txt.gz,36,"550,U100@DOM1,U100@DOM1,C101,C102,Kerberos,Network,LogOn,Success",False
+proc.txt.gz:1,102,PROCESS,PROCESS_START,U103@DOM1,C103,C103,,,,svchost.exe,{'proc_action': 'Start'},proc.txt.gz,1,"102,U103@DOM1,C103,svchost.exe,Start",False
+proc.txt.gz:2,125,PROCESS,PROCESS_START,U102@DOM1,C102,C102,,,,svchost.exe,{'proc_action': 'Start'},proc.txt.gz,2,"125,U102@DOM1,C102,svchost.exe,Start",False
+proc.txt.gz:3,136,PROCESS,PROCESS_START,U103@DOM1,C200,C200,,,,word.exe,{'proc_action': 'Start'},proc.txt.gz,3,"136,U103@DOM1,C200,word.exe,Start",False
+proc.txt.gz:4,148,PROCESS,PROCESS_START,U103@DOM1,C103,C103,,,,word.exe,{'proc_action': 'Start'},proc.txt.gz,4,"148,U103@DOM1,C103,word.exe,Start",False
+proc.txt.gz:5,162,PROCESS,PROCESS_START,U103@DOM1,C102,C102,,,,svchost.exe,{'proc_action': 'Start'},proc.txt.gz,5,"162,U103@DOM1,C102,svchost.exe,Start",False
+proc.txt.gz:6,186,PROCESS,PROCESS_START,U101@DOM1,C200,C200,,,,explorer.exe,{'proc_action': 'Start'},proc.txt.gz,6,"186,U101@DOM1,C200,explorer.exe,Start",False
+proc.txt.gz:7,198,PROCESS,PROCESS_START,U103@DOM1,C200,C200,,,,word.exe,{'proc_action': 'Start'},proc.txt.gz,7,"198,U103@DOM1,C200,word.exe,Start",False
+proc.txt.gz:8,216,PROCESS,PROCESS_START,U102@DOM1,C103,C103,,,,svchost.exe,{'proc_action': 'Start'},proc.txt.gz,8,"216,U102@DOM1,C103,svchost.exe,Start",False
+proc.txt.gz:9,232,PROCESS,PROCESS_START,U102@DOM1,C102,C102,,,,word.exe,{'proc_action': 'Start'},proc.txt.gz,9,"232,U102@DOM1,C102,word.exe,Start",False
+proc.txt.gz:10,243,PROCESS,PROCESS_START,U103@DOM1,C101,C101,,,,browser.exe,{'proc_action': 'Start'},proc.txt.gz,10,"243,U103@DOM1,C101,browser.exe,Start",False
+proc.txt.gz:11,259,PROCESS,PROCESS_START,U103@DOM1,C200,C200,,,,browser.exe,{'proc_action': 'Start'},proc.txt.gz,11,"259,U103@DOM1,C200,browser.exe,Start",False
+proc.txt.gz:12,280,PROCESS,PROCESS_START,U102@DOM1,C200,C200,,,,explorer.exe,{'proc_action': 'Start'},proc.txt.gz,12,"280,U102@DOM1,C200,explorer.exe,Start",False
+proc.txt.gz:13,298,PROCESS,PROCESS_START,U102@DOM1,C200,C200,,,,explorer.exe,{'proc_action': 'Start'},proc.txt.gz,13,"298,U102@DOM1,C200,explorer.exe,Start",False
+proc.txt.gz:14,318,PROCESS,PROCESS_START,U102@DOM1,C200,C200,,,,browser.exe,{'proc_action': 'Start'},proc.txt.gz,14,"318,U102@DOM1,C200,browser.exe,Start",False
+proc.txt.gz:15,334,PROCESS,PROCESS_START,U103@DOM1,C101,C101,,,,svchost.exe,{'proc_action': 'Start'},proc.txt.gz,15,"334,U103@DOM1,C101,svchost.exe,Start",False
+proc.txt.gz:16,356,PROCESS,PROCESS_START,U102@DOM1,C101,C101,,,,word.exe,{'proc_action': 'Start'},proc.txt.gz,16,"356,U102@DOM1,C101,word.exe,Start",False
+proc.txt.gz:17,371,PROCESS,PROCESS_START,U100@DOM1,C101,C101,,,,explorer.exe,{'proc_action': 'Start'},proc.txt.gz,17,"371,U100@DOM1,C101,explorer.exe,Start",False
+proc.txt.gz:18,390,PROCESS,PROCESS_START,U100@DOM1,C101,C101,,,,explorer.exe,{'proc_action': 'Start'},proc.txt.gz,18,"390,U100@DOM1,C101,explorer.exe,Start",False
+proc.txt.gz:19,409,PROCESS,PROCESS_START,U100@DOM1,C102,C102,,,,svchost.exe,{'proc_action': 'Start'},proc.txt.gz,19,"409,U100@DOM1,C102,svchost.exe,Start",False
+proc.txt.gz:20,420,PROCESS,PROCESS_START,U101@DOM1,C101,C101,,,,svchost.exe,{'proc_action': 'Start'},proc.txt.gz,20,"420,U101@DOM1,C101,svchost.exe,Start",False
+proc.txt.gz:21,437,PROCESS,PROCESS_START,U103@DOM1,C101,C101,,,,browser.exe,{'proc_action': 'Start'},proc.txt.gz,21,"437,U103@DOM1,C101,browser.exe,Start",False
+proc.txt.gz:22,451,PROCESS,PROCESS_START,U103@DOM1,C101,C101,,,,svchost.exe,{'proc_action': 'Start'},proc.txt.gz,22,"451,U103@DOM1,C101,svchost.exe,Start",False
+proc.txt.gz:23,468,PROCESS,PROCESS_START,U102@DOM1,C103,C103,,,,browser.exe,{'proc_action': 'Start'},proc.txt.gz,23,"468,U102@DOM1,C103,browser.exe,Start",False
+proc.txt.gz:24,484,PROCESS,PROCESS_START,U100@DOM1,C101,C101,,,,browser.exe,{'proc_action': 'Start'},proc.txt.gz,24,"484,U100@DOM1,C101,browser.exe,Start",False
+proc.txt.gz:25,507,PROCESS,PROCESS_START,U101@DOM1,C101,C101,,,,browser.exe,{'proc_action': 'Start'},proc.txt.gz,25,"507,U101@DOM1,C101,browser.exe,Start",False
+proc.txt.gz:26,642,PROCESS,PROCESS_START,U999@DOM1,C553,C553,,,,cmd.exe,{'proc_action': 'Start'},proc.txt.gz,26,"642,U999@DOM1,C553,cmd.exe,Start",False
+proc.txt.gz:27,645,PROCESS,PROCESS_START,U999@DOM1,C553,C553,,,,powershell_recon.exe,{'proc_action': 'Start'},proc.txt.gz,27,"645,U999@DOM1,C553,powershell_recon.exe,Start",False
+proc.txt.gz:28,725,PROCESS,PROCESS_START,U999@DOM1,C800,C800,,,,vssadmin.exe,{'proc_action': 'Start'},proc.txt.gz,28,"725,U999@DOM1,C800,vssadmin.exe,Start",False
+proc.txt.gz:29,700,PROCESS,PROCESS_START,,C553,C553,,,,,{'proc_action': 'Start'},proc.txt.gz,29,"700,?,C553,?,Start",False
+flows.txt.gz:1,103,NETWORK_FLOW,FLOW,,C103,C103,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,1,"103,5,C103,49152,C103,445,6,12,1850",False
+flows.txt.gz:2,126,NETWORK_FLOW,FLOW,,C101,C102,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,2,"126,5,C101,49152,C102,445,6,12,1850",False
+flows.txt.gz:3,137,NETWORK_FLOW,FLOW,,C200,C200,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,3,"137,5,C200,49152,C200,445,6,12,1850",False
+flows.txt.gz:4,149,NETWORK_FLOW,FLOW,,C200,C103,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,4,"149,5,C200,49152,C103,445,6,12,1850",False
+flows.txt.gz:5,163,NETWORK_FLOW,FLOW,,C101,C102,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,5,"163,5,C101,49152,C102,445,6,12,1850",False
+flows.txt.gz:6,187,NETWORK_FLOW,FLOW,,C102,C200,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,6,"187,5,C102,49152,C200,445,6,12,1850",False
+flows.txt.gz:7,199,NETWORK_FLOW,FLOW,,C200,C200,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,7,"199,5,C200,49152,C200,445,6,12,1850",False
+flows.txt.gz:8,217,NETWORK_FLOW,FLOW,,C101,C103,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,8,"217,5,C101,49152,C103,445,6,12,1850",False
+flows.txt.gz:9,233,NETWORK_FLOW,FLOW,,C200,C102,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,9,"233,5,C200,49152,C102,445,6,12,1850",False
+flows.txt.gz:10,244,NETWORK_FLOW,FLOW,,C200,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,10,"244,5,C200,49152,C101,445,6,12,1850",False
+flows.txt.gz:11,260,NETWORK_FLOW,FLOW,,C200,C200,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,11,"260,5,C200,49152,C200,445,6,12,1850",False
+flows.txt.gz:12,281,NETWORK_FLOW,FLOW,,C101,C200,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,12,"281,5,C101,49152,C200,445,6,12,1850",False
+flows.txt.gz:13,299,NETWORK_FLOW,FLOW,,C102,C200,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,13,"299,5,C102,49152,C200,445,6,12,1850",False
+flows.txt.gz:14,319,NETWORK_FLOW,FLOW,,C103,C200,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,14,"319,5,C103,49152,C200,445,6,12,1850",False
+flows.txt.gz:15,335,NETWORK_FLOW,FLOW,,C200,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,15,"335,5,C200,49152,C101,445,6,12,1850",False
+flows.txt.gz:16,357,NETWORK_FLOW,FLOW,,C200,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,16,"357,5,C200,49152,C101,445,6,12,1850",False
+flows.txt.gz:17,372,NETWORK_FLOW,FLOW,,C200,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,17,"372,5,C200,49152,C101,445,6,12,1850",False
+flows.txt.gz:18,391,NETWORK_FLOW,FLOW,,C102,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,18,"391,5,C102,49152,C101,445,6,12,1850",False
+flows.txt.gz:19,410,NETWORK_FLOW,FLOW,,C101,C102,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,19,"410,5,C101,49152,C102,445,6,12,1850",False
+flows.txt.gz:20,421,NETWORK_FLOW,FLOW,,C102,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,20,"421,5,C102,49152,C101,445,6,12,1850",False
+flows.txt.gz:21,438,NETWORK_FLOW,FLOW,,C103,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,21,"438,5,C103,49152,C101,445,6,12,1850",False
+flows.txt.gz:22,452,NETWORK_FLOW,FLOW,,C103,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,22,"452,5,C103,49152,C101,445,6,12,1850",False
+flows.txt.gz:23,469,NETWORK_FLOW,FLOW,,C101,C103,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,23,"469,5,C101,49152,C103,445,6,12,1850",False
+flows.txt.gz:24,485,NETWORK_FLOW,FLOW,,C102,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,24,"485,5,C102,49152,C101,445,6,12,1850",False
+flows.txt.gz:25,508,NETWORK_FLOW,FLOW,,C103,C101,49152.0,445.0,6,,"{'duration': 5, 'packet_count': 12, 'byte_count': 1850}",flows.txt.gz,25,"508,5,C103,49152,C101,445,6,12,1850",False
+flows.txt.gz:26,660,NETWORK_FLOW,FLOW,,C553,C9999_EXFIL,50123.0,443.0,6,,"{'duration': 180, 'packet_count': 15000, 'byte_count': 98500000}",flows.txt.gz,26,"660,180,C553,50123,C9999_EXFIL,443,6,15000,98500000",False
+flows.txt.gz:27,680,NETWORK_FLOW,FLOW,,C553,,,80.0,6,,"{'duration': None, 'packet_count': None, 'byte_count': None}",flows.txt.gz,27,"680,?,C553,?,?,80,6,?,?",False
+dns.txt.gz:1,101,DNS,DNS_QUERY,,C103,C103,,,,,{'resolved_host': 'C103'},dns.txt.gz,1,"101,C103,C103",False
+dns.txt.gz:2,124,DNS,DNS_QUERY,,C101,C102,,,,,{'resolved_host': 'C102'},dns.txt.gz,2,"124,C101,C102",False
+dns.txt.gz:3,135,DNS,DNS_QUERY,,C200,C200,,,,,{'resolved_host': 'C200'},dns.txt.gz,3,"135,C200,C200",False
+dns.txt.gz:4,147,DNS,DNS_QUERY,,C200,C103,,,,,{'resolved_host': 'C103'},dns.txt.gz,4,"147,C200,C103",False
+dns.txt.gz:5,161,DNS,DNS_QUERY,,C101,C102,,,,,{'resolved_host': 'C102'},dns.txt.gz,5,"161,C101,C102",False
+dns.txt.gz:6,185,DNS,DNS_QUERY,,C102,C200,,,,,{'resolved_host': 'C200'},dns.txt.gz,6,"185,C102,C200",False
+dns.txt.gz:7,197,DNS,DNS_QUERY,,C200,C200,,,,,{'resolved_host': 'C200'},dns.txt.gz,7,"197,C200,C200",False
+dns.txt.gz:8,215,DNS,DNS_QUERY,,C101,C103,,,,,{'resolved_host': 'C103'},dns.txt.gz,8,"215,C101,C103",False
+dns.txt.gz:9,231,DNS,DNS_QUERY,,C200,C102,,,,,{'resolved_host': 'C102'},dns.txt.gz,9,"231,C200,C102",False
+dns.txt.gz:10,242,DNS,DNS_QUERY,,C200,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,10,"242,C200,C101",False
+dns.txt.gz:11,258,DNS,DNS_QUERY,,C200,C200,,,,,{'resolved_host': 'C200'},dns.txt.gz,11,"258,C200,C200",False
+dns.txt.gz:12,279,DNS,DNS_QUERY,,C101,C200,,,,,{'resolved_host': 'C200'},dns.txt.gz,12,"279,C101,C200",False
+dns.txt.gz:13,297,DNS,DNS_QUERY,,C102,C200,,,,,{'resolved_host': 'C200'},dns.txt.gz,13,"297,C102,C200",False
+dns.txt.gz:14,317,DNS,DNS_QUERY,,C103,C200,,,,,{'resolved_host': 'C200'},dns.txt.gz,14,"317,C103,C200",False
+dns.txt.gz:15,333,DNS,DNS_QUERY,,C200,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,15,"333,C200,C101",False
+dns.txt.gz:16,355,DNS,DNS_QUERY,,C200,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,16,"355,C200,C101",False
+dns.txt.gz:17,370,DNS,DNS_QUERY,,C200,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,17,"370,C200,C101",False
+dns.txt.gz:18,389,DNS,DNS_QUERY,,C102,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,18,"389,C102,C101",False
+dns.txt.gz:19,408,DNS,DNS_QUERY,,C101,C102,,,,,{'resolved_host': 'C102'},dns.txt.gz,19,"408,C101,C102",False
+dns.txt.gz:20,419,DNS,DNS_QUERY,,C102,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,20,"419,C102,C101",False
+dns.txt.gz:21,436,DNS,DNS_QUERY,,C103,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,21,"436,C103,C101",False
+dns.txt.gz:22,450,DNS,DNS_QUERY,,C103,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,22,"450,C103,C101",False
+dns.txt.gz:23,467,DNS,DNS_QUERY,,C101,C103,,,,,{'resolved_host': 'C103'},dns.txt.gz,23,"467,C101,C103",False
+dns.txt.gz:24,483,DNS,DNS_QUERY,,C102,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,24,"483,C102,C101",False
+dns.txt.gz:25,506,DNS,DNS_QUERY,,C103,C101,,,,,{'resolved_host': 'C101'},dns.txt.gz,25,"506,C103,C101",False
+dns.txt.gz:26,658,DNS,DNS_QUERY,,C553,C9999_EXFIL,,,,,{'resolved_host': 'C9999_EXFIL'},dns.txt.gz,26,"658,C553,C9999_EXFIL",False
+redteam.txt.gz:1,635,REDTEAM,REDTEAM_GROUND_TRUTH,U999@DOM1,C17693,C553,,,,,{'description': 'LANL documented red-team exercise activity'},redteam.txt.gz,1,"635,U999@DOM1,C17693,C553",True
+redteam.txt.gz:2,720,REDTEAM,REDTEAM_GROUND_TRUTH,U999@DOM1,C553,C800,,,,,{'description': 'LANL documented red-team exercise activity'},redteam.txt.gz,2,"720,U999@DOM1,C553,C800",True
